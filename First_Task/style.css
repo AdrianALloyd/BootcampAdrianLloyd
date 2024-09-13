@@ -1,0 +1,122 @@
+
+body{
+    background-color: #605663;
+    margin: 0;
+
+}
+
+form{
+    max-width: 50%;
+}
+header{
+    padding: 0%;
+}
+nav{
+    width: 100%;
+    float: right;
+    text-align: right;    
+    background-color: #dcbee9e7;
+    display:inline;
+    list-style-type: none;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+
+}
+
+figure{
+    float: right;
+}
+
+
+img{
+    float: right;
+}
+
+p{
+    font-size: larger;
+}
+
+h1{
+    text-align: center;
+}
+
+ol{
+    font-size: larger;
+}
+
+video{
+    float:right;
+}
+
+.buttons{
+    display:inline;
+    list-style-type: none;
+    
+}
+
+.headerImage{
+    width: 100%;    
+    }               
+    
+.navButton{
+    
+    background-color: #605663;
+    display:inline;
+    list-style-type: none;
+}
+
+.rightDiv{
+    float: right;
+    max-width: 50%;
+}
+
+.contentMain{
+    float: left;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-right: 0%;
+}
+
+#teaParty{
+    float: right;
+}
+#mainDiv{
+    margin-top: 5%;
+    
+}
+
+#Alice1{
+    max-width: 100%;
+    float:right;
+    margin-left: 0%;
+    clear:left;
+}
+
+#figAlice1{
+    margin-top: 0%;
+    float: right;
+    clear:left;
+}
+
+#loginForm{
+    padding-top: 25px;
+}
+
+#teaList{
+    padding-top: 10%;
+    padding-left: 25%;
+    scale:150%;
+}
+
+#secrets{
+    margin:2%;
+    float:right;
+    clear: both;
+}
+
+#teaType{
+    list-style-type: none;
+}
+

@@ -1,0 +1,140 @@
+
+    
+    body{
+        background-color: darkgray;
+        margin:50px;
+    }
+
+    /* p{
+        display:inline;
+        background-color: beige;
+    } */
+
+    h1{
+        text-align: center;
+    }
+
+    .doggo{
+        height: 15%;
+        width: 15%;
+
+    }
+
+    .doggo:hover{
+        position:static;
+        height:25%;
+        width:25%;
+        
+    }
+
+
+
+    #doggo2{
+        display:none;
+    }
+
+
+    #doggo3{
+        visibility: hidden;
+    }
+    #doggo4{
+        position:sticky;
+        top:0%;
+    }
+
+    #doggo6{
+        position:sticky;
+        bottom:0%;
+    }
+
+    #p2{
+        background-color: darkgray;
+    }
+
+    .gridDemo{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(7 10%);
+        border: 15px solid red;
+        
+        
+    }
+
+    .gridItems{
+        border: 5px solid hotpink;
+        display: inline;
+        text-align: center;
+        overflow: hidden;
+        
+
+    }
+
+    #goodBoy{
+        max-width: 30%;
+        object-fit: cover;
+        grid-column: 1 / span 2;
+        grid-row: 5 / span 2;
+        justify-self: center;
+        
+    }
+
+    #A5{
+        grid-area: 5/1;
+    }
+    #B5{
+        grid-area: 5/2;
+    }
+    #A6{
+        grid-area: 6/1;
+    }
+    #B6{
+        grid-area: 6/2;
+    }
+
+/* @media (max-width:1279px){
+    body{
+        background-color: lightcoral;
+        margin: 50px 0px;
+    }
+
+    .doggo{
+        max-width: 32%;
+        min-width: 30%;
+        position:static;
+        display:inline;
+        visibility: visible;
+        margin: 1%;
+
+    }
+    
+    #doggo2{
+        display: inline;
+    }
+    #doggo3{
+        visibility: visible;
+    }
+
+    #doggo6{
+        position:static
+    }
+    #doggo4{
+        position:static
+    }
+
+}
+
+@media (min-width:1280px) {
+    .doggo{
+        position:static;
+        display:inline;
+        margin: 2%;
+        max-width: 32%;
+        min-width: 20%;
+    } 
+} */
+
+
+
+
+
+   
