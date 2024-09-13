@@ -6,7 +6,9 @@ body{
 }
 
 form{
-    max-width: 50%;
+    max-width: 30%;
+    float: right;
+    margin-right: 34%;
 }
 header{
     padding: 0%;
@@ -21,8 +23,6 @@ nav{
     padding-right: 25px;
     padding-top: 5px;
     padding-bottom: 5px;
-
-
 }
 
 figure{
@@ -40,6 +40,7 @@ p{
 
 h1{
     text-align: center;
+    padding-top: 17%;
 }
 
 ol{
@@ -48,6 +49,7 @@ ol{
 
 video{
     float:right;
+    margin-right: 10%;
 }
 
 .buttons{
@@ -77,6 +79,24 @@ video{
     margin-left: 10%;
     margin-top: 2%;
     margin-right: 0%;
+    text-align: center;
+}
+
+#sanity{
+    margin-top: 10%;
+    margin-left: 25%;
+    background-color: aliceblue;
+    padding: 0.5%;
+    border: solid 
+}
+
+#teaMaking{
+    min-width: 20%;
+    margin-left: 18%;
+    background-color: aliceblue;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    margin-top: 5%;
 }
 
 #teaParty{
@@ -120,3 +140,7 @@ video{
     list-style-type: none;
 }
 
+#aliceTable{
+    margin-top: 10%;
+    margin-left: 20%;
+}
