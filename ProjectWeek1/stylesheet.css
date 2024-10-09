@@ -42,6 +42,15 @@ nav{
     width: 100%;
 }
 
+a:link{
+    color:black;
+}
+a:visited{
+    color:black;
+}
+
+
+
 .navBar{
     display: block;
     color: white;
@@ -54,6 +63,8 @@ nav{
 .navBar a{
     margin-left: 3%;
     margin-right: 3%; 
+
+
     /* to do spread navbar items out */
 }
 
@@ -171,6 +182,12 @@ nav{
 
 
 
+.listTable a{
+    max-width: 40%;
+    margin-bottom: 10%;
+    padding: 2%;
+    
+}
 .listTable img{
     max-width: 40%;
     margin-bottom: 10%;
