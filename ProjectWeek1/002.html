@@ -6,9 +6,10 @@
     <title>Ivysaur</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
 </head>
 
-<body>
+<body onload="getData('2')">
     <header>
 
         <div class =homeLink>
@@ -35,13 +36,7 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 002</p>
-            <p>Type <b>: </b> Grass/Poison</p>
-            <p>Height <b>: </b> 1.0m</p>
-            <p>Weight <b>: </b> 13.0kg</p>
-            <p>About <b>: </b></p>
-            <p>When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.</p>
+        <div class="mainContent" id="detail">
             
         </div>
 

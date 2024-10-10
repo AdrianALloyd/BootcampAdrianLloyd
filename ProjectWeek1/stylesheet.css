@@ -1,5 +1,7 @@
+
 body{
     background-color:rgb(51, 46, 46);
+    /* background-color: white; */
     border: solid rgb(51, 46, 46);
     border-width: thick;
     margin: 0%;
@@ -7,7 +9,6 @@ body{
     color:white;
     cursor:  url(Assets/Pokeball.png), auto;
 }
-
 
 header img{
     max-width: 20%;
@@ -21,32 +22,35 @@ header img{
 header{
     width: 100%;  
 }
-footer{
-    position:absolute;
-    bottom: 0%;
-    right: 2%;
-    
-}
 
 h1{
-    text-align: center;
+    width: 20%;
+    margin-left: 40%;
+    text-align: center;   
+    border-radius: 4px;
+    border: solid 1px rgb(51, 46, 46);
+    box-shadow: 0 1px 0 1px black,
+    inset 0 1px 0 1px black,
+    0 0 0 1px black,
+    inset 0 0 0 2px black;
+}
+
+ul{
+    display: inline-block;
+}
+
+li{
+    border-radius: 4px;
+    border: solid 1px rgb(51, 46, 46);
+    box-shadow: 0 1px 0 1px black,
+    inset 0 1px 0 1px black,
+    0 0 0 1px black,
+    inset 0 0 0 2px black;
+    list-style-type: none;
+    padding: 2%;
+    margin: 2%;
+    background-color:rgb(51, 46, 46);
     
-}
-
-h5{
-    text-align: right;
-
-}
-
-nav{
-    width: 100%;
-}
-
-a:link{
-    color:black;
-}
-a:visited{
-    color:black;
 }
 
 
@@ -54,21 +58,74 @@ a:visited{
 .navBar{
     display: block;
     color: white;
-    background-color: white;
-    border: solid black 5px;
+    background-color: rgb(51, 46, 46);
+    border-radius: 4px;
+    border: solid 1px rgb(51, 46, 46);
+    box-shadow: 0 1px 0 1px black,
+    inset 0 1px 0 1px black,
+    0 0 0 1px black,
+    inset 0 0 0 2px black;
     font-size: large;
     text-align:center;
     width:100%;
 }
+
+a:link{
+    color:white;
+}
+a:visited{
+    color:white;
+}
+
+.pokeButton a:link{
+    color:black;
+}
+.pokeButton a:visited{
+    color:black;
+}
+
 .navBar a{
     margin-left: 3%;
     margin-right: 3%; 
-
-
     /* to do spread navbar items out */
 }
 
+.homeLink{
+    display:inline;
+    max-width: 10%;
+    padding: 0%;
+}
+.homeLink img{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    display: inline;
+    padding: 0%;
+    max-width: 10%;
+}
 
+.pokeData{
+    margin-left: 35%;
+}
+
+.pokeButton{
+    margin-bottom: 3%;
+    text-align: center;
+    width: 36%;
+    margin-left: 32%;
+    
+}
+
+#pokeList{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 5px;
+}
+
+#pokemons h2{
+    grid-column-start: 1;
+    grid-column-end: 7;
+}
 
 .gridContainer{
     display: grid;
@@ -85,18 +142,43 @@ a:visited{
     /* outline:solid white 5px; */
 
 }
-
 .mainContent{
     float: left;
     width:48%;
     margin-left: 30%;
     font-size: larger;
-    border: solid 5px black;
+    border-radius: 4px;
+    border: solid 1px rgb(51, 46, 46);
+    box-shadow: 0 1px 0 1px black,
+    inset 0 1px 0 1px black,
+    0 0 0 1px black,
+    inset 0 0 0 2px black;
+    padding: 5%;
     
 }
 .secondaryContent{
     margin-left: 30%;
     
+    
+}
+
+.pokemonImage img{
+    width: 200%;
+    padding:1%;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    grid-area: 1 1 span 2;
+}
+
+.evolutionImage{
+    grid-row-start: 2;
+    margin-top: 0%;
+}
+.evolutionImage img{
+    width: 100%;
+    height: 85%;
+    padding: 1%;
+    margin-top: 0%;
 }
 
 
@@ -128,120 +210,155 @@ a:visited{
 }
 
 
-.pokemonImage img{
-    width: 200%;
-    padding:1%;
-    padding-bottom: 0%;
-    margin-bottom: 0%;
-    grid-area: 1 1 span 2;
-}
-
-.evolutionImage{
-    grid-row-start: 2;
-    margin-top: 0%;
-}
-.evolutionImage img{
-    width: 100%;
-    height: 85%;
-    padding: 1%;
-    margin-top: 0%;
-}
 
 
-#banner{
+/* Type classes */
+
+.normal{
     display: inline;
-    order:-1;
-}
-
-.list{
-    text-align: right;
-    grid-column-start: 2 ;
-    grid-column-end: 3;
-    max-width: 35%;
-    margin-top: 5%;
-    /* margin-bottom: 5%; */
-    /* border: 5px red solid; */
-    justify-self: center;
-    padding-top: 13%;
-    margin-right: -35%;
-}
-
-
-.listTable{
-    margin-top: 5%;
-    margin-left: 40%;
-    margin-right: 30%;
-    /* max-width: 25%; */
-}
-.listTable td{
-    text-align: center;
-    font-size:larger;
-
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: beige;
+    color:black;
     
 }
 
-
-
-.listTable a{
-    max-width: 40%;
-    margin-bottom: 10%;
-    padding: 2%;
-    
-}
-.listTable img{
-    max-width: 40%;
-    margin-bottom: 10%;
-    padding: 2%;
-    border: solid 5px rgb(0, 0, 0);
-    background-color: white;
-
-}
-
-
-.homeLink{
-    display:inline;
-    max-width: 10%;
-    padding: 0%;
-}
-.homeLink img{
-    position: absolute;
-    top: 3%;
-    left: 3%;
+.fire{
     display: inline;
-    padding: 0%;
-    max-width: 10%;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: orange;
+    color:white;
 }
 
-
-@media (min-width:1280) {
-    .listTable img{
-        max-width: 40%;
-        margin-bottom: 10%;
-        padding: 2%;
-        border: solid 5px rgb(0, 0, 0);
-        background-color: white;
-    
-    }
-
-    .listTable td{
-        text-align: center;
-        font-size:larger;
-    
-        
-    }
-
-    .listTable{
-        margin-top: 5%;
-        margin-left: 40%;
-        margin-right: 30%;
-        /* max-width: 25%; */
-    }
-
-    .listTable img{
-        max-width: 40%;
-        margin-bottom: 10%;
-        padding: 2%;
-        border: solid 5px rgb(0, 0, 0);
-        background-color: white;
+.water{
+    display: inline;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: blue;
+    color:white;
     
 }
+
+.ice{
+    display: inline;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: lightblue;
+    color:black;
+    
+}
+
+.electric{
+    display: inline;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: gold;
+    color:black;
+    
+}
+
+.fighting{
+    display: inline;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: darkred;
+    color:white;
+    
+}
+
+.flying{
+    display: inline;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: skyblue;
+    color:black;
+    
+}
+
+.bug{
+    display: inline;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: yellowgreen;
+    color:white;
+    
+}
+
+.ghost{
+    display: inline;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: purple;
+    color:white;
+    
+}
+
+.rock{
+    display: inline;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: sienna;
+    color:white;
+    
+}
+
+.psychic{
+    display: inline;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: palevioletred;
+    color:white;
+    
+}
+
+.dragon{
+    display: inline;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: teal;
+    color:white;
+    
+}
+
+.poison{
+    display: inline;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: darkviolet;
+    color:white;
+    
+}
+
+.ground{
+    display: inline;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: burlywood;
+    color:black;
+    
+}
+
+.grass{
+    display: inline;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1% 2% 2% 2%;
+    background-color: green;
+    color:white;
+}
+
