@@ -6,9 +6,11 @@
     <title>Mew</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('151')">
     <header>
 
         <div class =homeLink>
@@ -34,25 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 151</p>
-            <p>Type <b>: </b> Psychic</p>
-            <p>Height <b>: </b> 0.4m</p>
-            <p>Weight <b>: </b> 4.0kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                So rare that it is still said to be a mirage by many experts. Only a few people have seen it worldwide.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="151.html" class="pokemonImage"><img src="Assets/151.png" ></a>
+            <div class="gridImage" id="imageDetail">
                 
-
-
-
             </div>
         </div>
     </div>

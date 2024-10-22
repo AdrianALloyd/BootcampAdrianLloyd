@@ -6,9 +6,11 @@
     <title>Golem</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('76')">
     <header>
 
         <div class =homeLink>
@@ -34,24 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 076</p>
-            <p>Type <b>: </b> Rock/Ground</p>
-            <p>Height <b>: </b> 1.4m</p>
-            <p>Weight <b>: </b> 300kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                Its boulder-like body is extremely hard. It can easily withstand dynamite blasts without damage.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="076.html" class="pokemonImage"><img src="Assets/076.png" ></a>
-                <a href="074html" class="evolutionImage"><img src="Assets/074.png"></a>
-                <a href="075.html" class="evolutionImage"><img src="Assets/075.png"></a>
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

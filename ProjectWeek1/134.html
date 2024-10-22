@@ -6,9 +6,11 @@
     <title>Vaporeon</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('134')">
     <header>
 
         <div class =homeLink>
@@ -34,25 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 134</p>
-            <p>Type <b>: </b> Water</p>
-            <p>Height <b>: </b> 1.0m</p>
-            <p>Weight <b>: </b> 29kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                Lives close to water. Its long tail is ridged with a fin which is often mistaken for a mermaid's.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="134.html" class="pokemonImage"><img src="Assets/134.png" ></a>
-                <a href="133.html" class="evolutionImage"><img src="Assets/133.png"></a>
+            <div class="gridImage" id="imageDetail">
                 
-
-
             </div>
         </div>
     </div>

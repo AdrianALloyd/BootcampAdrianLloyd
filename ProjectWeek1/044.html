@@ -6,9 +6,10 @@
     <title>Gloom</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
 </head>
 
-<body>
+<body onload="getData('44')">
     <header>
 
         <div class =homeLink>
@@ -34,21 +35,13 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 044</p>
-            <p>Type <b>: </b> Grass/Poison</p>
-            <p>Height <b>: </b> 0.8m</p>
-            <p>Weight <b>: </b> 8.6kg</p>
-            <p>About <b>: </b></p>
-            <p>The fluid that oozes from its mouth isn't drool. It is a nectar that is used to attract prey.</p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="044.html" class="pokemonImage"><img src="Assets/044.png" ></a>
-                <a href="043.html" class="evolutionImage"><img src="Assets/043.png"></a>
-                <a href="045.html" class="evolutionImage"><img src="Assets/045.png"></a>
+            <div class="gridImage" id="imageDetail">
                 
             </div>
         </div>

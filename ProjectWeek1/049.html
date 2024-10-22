@@ -6,9 +6,10 @@
     <title>Venomoth</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
 </head>
 
-<body>
+<body onload="getData('49')">
     <header>
 
         <div class =homeLink>
@@ -34,22 +35,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 049</p>
-            <p>Type <b>: </b> Bug/Poison</p>
-            <p>Height <b>: </b> 1.5m</p>
-            <p>Weight <b>: </b> 12.5kg</p>
-            <p>About <b>: </b></p>
-            <p>The dust-like scales covering its wings are color coded to indicate the kinds of poison it has.</p>
+        <div class="mainContent" id="detail" >
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="049.html" class="pokemonImage"><img src="Assets/049.png" ></a>
-                <a href="048.html" class="evolutionImage"><img src="Assets/048.png"></a>
-                
-                
+            <div class="gridImage" id="imageDetail">
+                    
             </div>
         </div>
     </div>

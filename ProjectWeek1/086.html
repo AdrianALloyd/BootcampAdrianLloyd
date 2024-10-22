@@ -6,9 +6,11 @@
     <title>Seel</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('86')">
     <header>
 
         <div class =homeLink>
@@ -34,24 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 086</p>
-            <p>Type <b>: </b> Water</p>
-            <p>Height <b>: </b> 1.1m</p>
-            <p>Weight <b>: </b> 90kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                The protruding horn on its head is very hard. It is used for bashing through thick ice.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="086.html" class="pokemonImage"><img src="Assets/086.png" ></a>
-                <a href="087.html" class="evolutionImage"><img src="Assets/087.png"></a>
-
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

@@ -6,9 +6,11 @@
     <title>Arbok</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('24')">
     <header>
 
         <div class =homeLink>
@@ -34,21 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 024</p>
-            <p>Type <b>: </b> Poison</p>
-            <p>Height <b>: </b> 3.5m</p>
-            <p>Weight <b>: </b> 65kg</p>
-            <p>About <b>: </b></p>
-            <p>It is rumored that the ferocious warning markings on its belly differ from area to area.</p>
+        <div class="mainContent"  id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="024.html" class="pokemonImage"><img src="Assets/024.png" ></a>
-                <a href="023.html" class="evolutionImage"><img src="Assets/023.png"></a>
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

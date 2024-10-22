@@ -6,9 +6,11 @@
     <title>Psyduck</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('54')">
     <header>
 
         <div class =homeLink>
@@ -34,23 +36,13 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 054</p>
-            <p>Type <b>: </b> Water</p>
-            <p>Height <b>: </b> 0.8m</p>
-            <p>Weight <b>: </b> 19.6kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                While lulling its enemies with its vacant look, this wily Pokémon will use psychokinetic powers.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="054.html" class="pokemonImage"><img src="Assets/054.png" ></a>
-                <a href="055.html" class="evolutionImage"><img src="Assets/055.png"></a>
-                
+            <div class="gridImage" id="imageDetail">
                 
             </div>
         </div>

@@ -6,9 +6,10 @@
     <title>Vulpix</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
 </head>
 
-<body>
+<body onload="getData('37')">
     <header>
 
         <div class =homeLink>
@@ -34,21 +35,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 037</p>
-            <p>Type <b>: </b> Fire</p>
-            <p>Height <b>: </b> 0.6m</p>
-            <p>Weight <b>: </b> 9.9kg</p>
-            <p>About <b>: </b></p>
-            <p>At the time of birth, it has just one tail. The tail splits from its tip as it grows older.</p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="037.html" class="pokemonImage"><img src="Assets/037.png" ></a>
-                <a href="038.html" class="evolutionImage"><img src="Assets/038.png"></a>
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

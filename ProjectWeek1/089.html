@@ -6,9 +6,11 @@
     <title>Muk</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('89')">
     <header>
 
         <div class =homeLink>
@@ -34,23 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 089</p>
-            <p>Type <b>: </b> Poison</p>
-            <p>Height <b>: </b> 1.2m</p>
-            <p>Weight <b>: </b> 30kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                Thickly covered with a filthy, vile sludge. It is so toxic, even its footprints contain poison.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="089.html" class="pokemonImage"><img src="Assets/089.png" ></a>
-                <a href="088.html" class="evolutionImage"><img src="Assets/088.png"></a>
-                
+            <div class="gridImage" id="imageDetail">
+                  
             </div>
         </div>
     </div>

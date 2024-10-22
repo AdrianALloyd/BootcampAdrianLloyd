@@ -6,9 +6,11 @@
     <title>Aerodactyl</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('142')">
     <header>
 
         <div class =homeLink>
@@ -34,24 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 142</p>
-            <p>Type <b>: </b> Rock/Flying</p>
-            <p>Height <b>: </b> 1.8m</p>
-            <p>Weight <b>: </b> 59kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                A ferocious, prehistoric Pokémon that goes for the enemy's throat with its serrated saw-like fangs.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="142.html" class="pokemonImage"><img src="Assets/142.png" ></a>
-            
-
-
+            <div class="gridImage" id="imageDetail">
+                
             </div>
         </div>
     </div>

@@ -6,9 +6,11 @@
     <title>Electabuzz</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('125')">
     <header>
 
         <div class =homeLink>
@@ -34,21 +36,13 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 125</p>
-            <p>Type <b>: </b> Electric</p>
-            <p>Height <b>: </b> 1.1m</p>
-            <p>Weight <b>: </b> 30kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                Normally found near power plants, they can wander away and cause major blackouts in cities.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="125.html" class="pokemonImage"><img src="Assets/125.png" ></a>
+            <div class="gridImage" id="imageDetail">
                 
             </div>
         </div>

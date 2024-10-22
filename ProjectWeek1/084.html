@@ -6,9 +6,11 @@
     <title>Doduo</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('84')">
     <header>
 
         <div class =homeLink>
@@ -34,22 +36,13 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 084</p>
-            <p>Type <b>: </b> Normal/Flying</p>
-            <p>Height <b>: </b> 1.4m</p>
-            <p>Weight <b>: </b> 39.2kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                A bird that makes up for its poor flying with its fast foot speed. Leaves giant footprints.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="084.html" class="pokemonImage"><img src="Assets/084.png" ></a>
-                <a href="085.html" class="evolutionImage"><img src="Assets/085.png"></a>
+            <div class="gridImage" id="imageDetail">
                 
             </div>
         </div>

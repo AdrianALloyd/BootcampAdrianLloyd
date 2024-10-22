@@ -6,9 +6,11 @@
     <title>Wartortle</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('8')">
     <header>
 
         <div class =homeLink>
@@ -34,21 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 008</p>
-            <p>Type <b>: </b> Water</p>
-            <p>Height <b>: </b> 1.0m</p>
-            <p>Weight <b>: </b> 22.5kg</p>
-            <p>About <b>: </b></p>
-            <p>Often hides in water to stalk unwary prey. For swimming fast, it moves its ears to maintain balance.</p>
+        <div class="mainContent"  id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="008.html" class="pokemonImage"><img src="Assets/008.png" ></a>
-                <a href="007.html" class="evolutionImage"><img src="Assets/007.png"></a>
-                <a href="009.html" class="evolutionImage"><img src="Assets/009.png"></a>
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

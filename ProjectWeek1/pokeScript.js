@@ -1,3 +1,4 @@
+
 function fetchKantoPokemon(){
     fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
     .then(response => response.json())
@@ -13,40 +14,39 @@ function fetchPokemonData(pokemon){
     fetch(url)
     .then(response => response.json()) // formatting the response into a json file
     .then(function(pokeData){
-        console.log(pokeData)
     })
 }
 
-// const baseUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151`'
-// try {
-//     fetch(baseUrl)
-//     .then(response => {
-//         const responseJson = response.json()
-//         return responseJson
-//         })
-//     .then(data => {
-//         const pokemons = data.results
+const baseUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151`'
+try {
+    fetch(baseUrl)
+    .then(response => {
+        const responseJson = response.json()
+        return responseJson
+        })
+    .then(data => {
+        const pokemons = data.results
         
-//         pokemons.forEach(pokemon => {
-//             document.getElementById('pokeList')
-//             .insertAdjacentHTML('beforeend', 
-//                 `<li class="listers" onclick='detail("${pokemon.url}")'>
+        pokemons.forEach(pokemon => {
+            document.getElementById('pokeList')
+            .insertAdjacentHTML('beforeend', 
+                `<li class="listers" onclick='detail("${pokemon.url}")'>
                 
-//                 <img class="pokeData" alt="${pokemon.name}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokIdGetter(pokemon.url)}.png"/>    
-//                 <br>
-//                 <button class="pokeButton"><a href="${pokLinkGetter(pokemon.url)}.html" >${pokemon.name}</a></button>            
-//                 </li>
+                <img class="pokeData" alt="${pokemon.name}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokIdGetter(pokemon.url)}.png"/>    
+                <br>
+                <button class="pokeButton"><a href="${pokIdFormat(pokemon.id)}.html" >${pokemon.name}</a></button>            
+                </li>
                 
-//                 `)
+                `)
                 
-//             })
-//         })
-//     .catch(error => {
-//         console.error(error)
-//         })
-// } catch (error) {
-//     console.error(error)
-// }
+            })
+        })
+    .catch(error => {
+        console.error(error)
+        })
+} catch (error) {
+    console.error(error)
+}
 
 
 
@@ -58,36 +58,42 @@ function fetchPokemonData(pokemon){
                 .then(response => response.json())
                 .then(pokemon => {
                  // Condition to check if mono or dual type
-                if(pokemon.types.length > 1){
-                    var pokTypes = [pokemon.types[0].type.name, pokemon.types[1].type.name]
+                if(pokemon.past_types.length > 0){         //checking if any past types are present
+                    if(pokemon.past_types[0].types.length > 1){
+                        var pokTypes = [pokemon.past_types[0].types[0].type.name, pokemon.past_types[0].types[1].type.name]
+                    }else{
+                        var pokTypes = [pokemon.past_types[0].types[0].type.name]
+                    }
                 }else{
-                    var pokTypes = [pokemon.types[0].type.name]
+                    if(pokemon.types.length > 1){
+                        var pokTypes = [pokemon.types[0].type.name, pokemon.types[1].type.name]
+                    }else{
+                        var pokTypes = [pokemon.types[0].type.name]
+                    }
                 }
+                //type names put into an array to be processed later
                 
-                    // document.getElementById('typeText').innerHTML = `Type: ${pokeType}`
+                    
                     document.getElementById('detail')
                     // Inserts element in specified position, in this case, we're inserting it at the end of the current element
                         .insertAdjacentHTML('beforeend', // Template literal for pokemon information
                         
                         `
-                            <p>ID : ${pokIdFormat(pokemon.id)}</p>
+                            <p>ID : ${pokIdFormat(pokemon.id)}</p>  
                             <p id="pokeType">Type :<br>  ${getType(pokTypes)}</p>
                             <p>Height : ${pokemon.height/10}m</p>
                             <p>Weight : ${pokemon.weight/10}kg</p>
                             <p id="flavourText">${getFlavour(pokemon.id)}</p>
                             <audio id="pokeCry" autoplay volume="0.05"  src="${pokemon.cries.legacy}"/>
-                            
                         `
-                        // Can add controls attribute to audio tag for playback controls
-                        // <p>ID <b>:</b> 001</p>
-                        // <p id="typeText">Type <b>: </b> </p>
-                        // <p>Height <b>: </b> 0.7m</p>
-                        // <p>Weight <b>: </b> 6.9kg</p>
-                        // <p>About <b>: </b></p>
-                        // <p>A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon</p>
-                        
-                            
-                )}
+                            // <p>ID : ${pokIdFormat(pokemon.id)}</p>    passing pokemons id number to be parsed into 3 digits
+                            // <p id="pokeType">Type :<br>  ${getType(pokTypes)}</p>  passing type array to output processed and styled types
+                            // <p>Height : ${pokemon.height/10}m</p>
+                            // <p>Weight : ${pokemon.weight/10}kg</p>
+                            // <p id="flavourText">${getFlavour(pokemon.id)}</p>   calls function to get flavour text of each pokemon
+                            // <audio id="pokeCry" autoplay volume="0.05"  src="${pokemon.cries.legacy}"/>   plays the pokemons cry on page load
+                    )
+            }
                     )
                 .catch(error => {
                     console.error(error)
@@ -98,51 +104,64 @@ function fetchPokemonData(pokemon){
         }
     
 
-function getType(typeArr){
+        const imageSet = (url) => {  //function to add the currently selected pokemon's image to the page
+            try {
+                fetch(url)
+                    .then(response => response.json())
+                    .then(pokemon => {
+                        
+                        getEvolutions(pokemon.id)
+                        document.getElementById('imageDetail') 
+                        // Inserts element in specified position, in this case, we're inserting it at the end of the current element
+                            .insertAdjacentHTML('beforeend', // Template literal for pokemon information
+                            
+                                
+                                `
+                                <a href="${pokIdFormat(pokemon.id)}.html"  class="pokemonImage"><img alt="${pokemon.name}" src="${pokemon["sprites"]["other"]["official-artwork"]["front_default"]}"/><a/>
+                                `    
+                                //template literal creating an image of the selected pokemon that with link to the pokemon's page
+                            )       
+                }
+                        )
+                    .catch(error => {
+                        console.error(error)
+                        })
+                } catch (error) {
+                    console.error(error)
+                    }
+            }
+
+function getType(typeArr){ //
 
     var type1 = typeArr[0];
     var type2 = typeArr[1];
-    console.log(typeArr[0]);
-    console.log(type1);
 
     if(typeArr.length > 1){
-        console.log("error1");
+        
         return `<p class =${type1}>${type1}</p>  <p class =${type2}>${type2}</p>`
-            
-        
-        
+        //returns filled out template for dual type pokemon
     }else{
-        console.log("error2");
-            return `type1`
-            
-            
         
+        return `<p class=${type1}>${type1}</p>`
+        //returns filled out template for single type pokemon
     }
 }
 
 
 
-
 const getFlavour = (id) =>{
     let url = "https://pokeapi.co/api/v2/pokemon-species/" + id;
-    console.log(url);
+    //gets the species section of the pokeapi
     try{
         fetch(url)
             .then(response => response.json())
             .then(pokemon => {
-                let flavour = pokemon.flavor_text_entries[0].flavor_text;
-                // let flavour = "";
-                // for(let x of flavour){
-                //     if((old_flavour[x] >='a' && old_flavour[x] <= 'z')||(old_flavour[x] >='Z' && old_flavour[x] <= 'Z')||(old_flavour[x] >='0' && old_flavour[x] <= '9')||(old_flavour[x] == 'é')||(old_flavour[x] == ' ')){
-                //         flavor += old_flavour;
-                //     }else{
-                        
-                //     }
-                // }
-                console.log(flavour)
+                let flavour = pokemon.flavor_text_entries[9].flavor_text;
+                // gets the flavour text from the 9th generation (identical to first generation without obsolete symbols)
+                
                 document.getElementById("flavourText").innerHTML = '';
                 document.getElementById("flavourText").insertAdjacentHTML('beforeend',`About :<br> ${flavour}`);
-                
+                //puts the flavour text on screen
             })
             .catch(error => {
                 console.error(error)
@@ -150,55 +169,132 @@ const getFlavour = (id) =>{
     } catch(error){
         console.error(error)
     }
+}
+
+const getEvolutions = (id) =>{ //function to get the evolutions for currently selected pokemon
+
+    var evolId;
+    let urlEvo = "https://pokeapi.co/api/v2/pokemon-species/" + id; 
+    try{
+        fetch(urlEvo)
+        .then(response => response.json())
+        .then(pokemon => {
+            evolId = pokEvoIdGetter(pokemon.evolution_chain.url);
+            //gets the url to be used for the evolution chain
+    let url = "https://pokeapi.co/api/v2/evolution-chain/" + evolId;
+    var pokeID = pokemon.name;
+    try{
+        fetch(url)
+        .then(response => response.json())
+        .then(pokemon => {
+            var baseIdentifier = [];
+            var evoIdentifier = [];
+            var secondEvoIdentifier = [];
+            //creating arrays to be concatenated later
+            
+            baseIdentifier[0] = pokemon["chain"]["species"]["name"]
+            //sets the value for the base level pokemon
+            for(let x in pokemon["chain"]["evolves_to"]){ //loop to check for multiple evolutions at 1st level eg. Eevee
+                if(pokemon["chain"]["evolves_to"].length != 0){
+                    evoIdentifier[x] = pokemon["chain"]["evolves_to"][x]["species"]["name"]
+            }
+            for(let y in pokemon["chain"]["evolves_to"][0]["evolves_to"]){ //loop to check for multiple evolutions at 2nd level eg. politoad (although not neccesary for kanto only)
+                if(pokemon["chain"]["evolves_to"][x]["evolves_to"].length != 0){
+                    secondEvoIdentifier[x] = pokemon["chain"]["evolves_to"][x]["evolves_to"][0]["species"]["name"]
+                }
+            }
+            var evoArray = baseIdentifier.concat(evoIdentifier,secondEvoIdentifier);
+            //joining the arrays together
+            }
+            for(let x in evoArray){
+                if(evoArray[x] != pokeID){
+                setevoImage(toUrl(evoArray[x])); //checks for currently selected pokemon so the image isn't also added in the evolution slots
+                } 
+            }
+        })
+        .catch(error => {
+            console.error(error)
+            })
+    } catch(error){
+        console.error(error)
+    }
+
+        })
+        .catch(error => {
+            console.error(error)
+            })
+    } catch(error){
+        console.error(error)
+    } 
+
     
 }
-        
-function getData(id){
+
+
+const setevoImage = (url) => {  //function to add in evolution images
+    try {
+        fetch(url)
+            .then(response => response.json())
+            .then(pokemon => {
+                
+                
+                if(pokemon.id <= 151){
+                document.getElementById('imageDetail')
+                    .insertAdjacentHTML('beforeend', 
+                        `
+                        <a href="${pokIdFormat(pokemon.id)}.html" class="evolutionImage"><img alt="${pokemon.name}" src="${pokemon["sprites"]["other"]["official-artwork"]["front_default"]}"/></a>
+                        `    
+                        //template literal creating an image of the selected pokemon's evolutions that with link to the pokemon's page
+                    )  
+                }     
+        }
+                )
+            .catch(error => {
+                console.error(error)
+                })
+        } catch (error) {
+            console.error(error)
+            }
+    }
+
+
+function getData(id){  //function to call the functions to set the data and images on the page
     let x = toUrl(id);
     dataSet(x);
+    imageSet(x);
 }
 
-function toUrl(idNumber){
-    let urlString = "https://pokeapi.co/api/v2/pokemon/" + idNumber;
-    
-    return urlString;
+function toUrl(idNumber){ //gets the url with corrosponding pokemon id number
+
+    let urlString = "https://pokeapi.co/api/v2/pokemon/" + idNumber;  
+    return urlString; 
 }
 
 
-function pokIdGetter(urlString){
-    let length = urlString.length;
-    let pokId = urlString.substr(34);
+
+
+function pokEvoIdGetter(urlString){ //function to process the url string to get only the id number of the evolutions of the pokemon selected
+    let pokId = urlString.substr(42);
     pokId = pokId.substr(0, pokId.length-1)
-    console.log(pokId);
-    console.log(length);
     return pokId;
 }
 
-function pokIdFormat(pokeNum){
-    if(pokeNum.length == 3){
+function pokIdGetter(urlString){ //function to process the url string to get only the id number of the selected pokemon
+    let length = urlString.length;
+    let pokId = urlString.substr(34);
+    pokId = pokId.substr(0, pokId.length-1)
+    return pokId;
+}
+
+function pokIdFormat(pokeNum){   //function to format the pokemons id number to 3 digits
+    let numString = pokeNum.toString();
+    if(numString.length == 3){
         return pokeNum;
-    }else if(pokeNum.length == 2){
+    }else if(numString.length == 2){
         return "0" + pokeNum;
-    }else if(pokeNum.length == 1){
+    }else if(numString.length == 1){
         return "00" + pokeNum;
     }else{
         return "001";
     }
 }
-
-function pokLinkGetter(urlString){
-    let pokeNum = pokIdGetter(urlString);
-
-    if(pokeNum.length == 3){
-        return pokeNum;
-    }else if(pokeNum.length == 2){
-        return "0" + pokeNum;
-    }else if(pokeNum.length == 1){
-        return "00" + pokeNum;
-    }else{
-        return "001";
-    }
-
-}
-
-

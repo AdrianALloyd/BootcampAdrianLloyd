@@ -6,9 +6,11 @@
     <title>Sandshrew</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
 </head>
 
-<body>
+<body onload="getData('27')">
+    >
     <header>
 
         <div class =homeLink>
@@ -34,21 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 027</p>
-            <p>Type <b>: </b> Ground</p>
-            <p>Height <b>: </b> 0.6m</p>
-            <p>Weight <b>: </b> 12kg</p>
-            <p>About <b>: </b></p>
-            <p>Burrows deep underground in arid locations far from water. It only emerges to hunt for food..</p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="027.html" class="pokemonImage"><img src="Assets/027.png" ></a>
-                <a href="028.html" class="evolutionImage"><img src="Assets/028.png"></a>
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

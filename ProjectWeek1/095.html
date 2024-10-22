@@ -6,9 +6,11 @@
     <title>Onix</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('95')">
     <header>
 
         <div class =homeLink>
@@ -34,23 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 095</p>
-            <p>Type <b>: </b> Rock/Ground</p>
-            <p>Height <b>: </b> 8.8m</p>
-            <p>Weight <b>: </b> 210kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                As it grows, the stone portions of its body harden to become similar to a diamond, but colored black.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="095.html" class="pokemonImage"><img src="Assets/095.png" ></a>
-               
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

@@ -6,9 +6,11 @@
     <title>Chansey</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<bodbody onload="getData('113')"y>
     <header>
 
         <div class =homeLink>
@@ -34,23 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 113</p>
-            <p>Type <b>: </b> Normal</p>
-            <p>Height <b>: </b> 1.1m</p>
-            <p>Weight <b>: </b> 34.6kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                A rare and elusive Pokémon that is said to bring happiness to those who manage to get it.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="113.html" class="pokemonImage"><img src="Assets/113.png" ></a>
-                
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

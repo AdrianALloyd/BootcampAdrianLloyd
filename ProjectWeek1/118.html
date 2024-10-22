@@ -6,9 +6,11 @@
     <title>Goldeen</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('118')">
     <header>
 
         <div class =homeLink>
@@ -34,23 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 118</p>
-            <p>Type <b>: </b> Water</p>
-            <p>Height <b>: </b> 0.6m</p>
-            <p>Weight <b>: </b> 15kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                Its tail fin billows like an elegant ballroom dress, giving it the nickname of the Water Queen.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="118.html" class="pokemonImage"><img src="Assets/118.png" ></a>
-                <a href="119.html" class="evolutionImage"><img src="Assets/119.png"></a>
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

@@ -6,9 +6,11 @@
     <title>Hitmonlee</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('106')">
     <header>
 
         <div class =homeLink>
@@ -34,23 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 106</p>
-            <p>Type <b>: </b> Fighting</p>
-            <p>Height <b>: </b> 1.5m</p>
-            <p>Weight <b>: </b> 49.8kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                When in a hurry, its legs lengthen progressively. It runs smoothly with extra long, loping strides.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="106.html" class="pokemonImage"><img src="Assets/106.png" ></a>
-                
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

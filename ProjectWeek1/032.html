@@ -6,9 +6,10 @@
     <title>Nidoran♂</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
 </head>
 
-<body>
+<body onload="getData('32')">
     <header>
 
         <div class =homeLink>
@@ -34,22 +35,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 032</p>
-            <p>Type <b>: </b> Poison</p>
-            <p>Height <b>: </b> 0.5m</p>
-            <p>Weight <b>: </b> 9.0kg</p>
-            <p>About <b>: </b></p>
-            <p>Stiffens its ears to sense danger. The larger its horns, the more powerful its secreted venom.</p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="032.html" class="pokemonImage"><img src="Assets/032.png" ></a>
-                <a href="033.html" class="evolutionImage"><img src="Assets/033.png"></a>
-                <a href="034.html" class="evolutionImage"><img src="Assets/034.png"></a>
-
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

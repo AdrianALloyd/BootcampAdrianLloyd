@@ -6,9 +6,11 @@
     <title>Starmie</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('121')">
     <header>
 
         <div class =homeLink>
@@ -34,22 +36,13 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 121</p>
-            <p>Type <b>: </b> Water</p>
-            <p>Height <b>: </b> 1.1m</p>
-            <p>Weight <b>: </b> 80kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                Its central core glows with the seven colors of the rainbow. Some people value the core as a gem.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="121.html" class="pokemonImage"><img src="Assets/121.png" ></a>
-                <a href="120.html" class="evolutionImage"><img src="Assets/120.png"></a>
+            <div class="gridImage" id="imageDetail">
                 
             </div>
         </div>

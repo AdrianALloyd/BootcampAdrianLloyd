@@ -6,9 +6,11 @@
     <title>Seaking</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('119')">
     <header>
 
         <div class =homeLink>
@@ -34,22 +36,13 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 119</p>
-            <p>Type <b>: </b> Water</p>
-            <p>Height <b>: </b> 1.3m</p>
-            <p>Weight <b>: </b> 39kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                In the autumn spawning season, they can be seen swimming powerfully up rivers and creeks.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="119.html" class="pokemonImage"><img src="Assets/119.png" ></a>
-                <a href="118.html" class="evolutionImage"><img src="Assets/118.png"></a>
+            <div class="gridImage" id="imageDetail">
                 
             </div>
         </div>

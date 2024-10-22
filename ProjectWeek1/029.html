@@ -6,9 +6,11 @@
     <title>Nidoran♀</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
 </head>
 
-<body>
+<body onload="getData('29')">
+    >
     <header>
 
         <div class =homeLink>
@@ -34,21 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 029</p>
-            <p>Type <b>: </b> Poison</p>
-            <p>Height <b>: </b> 0.4m</p>
-            <p>Weight <b>: </b> 7.0kg</p>
-            <p>About <b>: </b></p>
-            <p>Although small, its venomous barbs render this Pokémon dangerous. The female has smaller horns.</p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="029.html" class="pokemonImage"><img src="Assets/029.png" ></a>
-                <a href="030.html" class="evolutionImage"><img src="Assets/030.png"></a>
-                <a href="031.html" class="evolutionImage"><img src="Assets/031.png"></a>
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

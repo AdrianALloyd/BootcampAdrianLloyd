@@ -6,9 +6,11 @@
     <title>Kakuna</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('14')">
     <header>
 
         <div class =homeLink>
@@ -34,21 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 014</p>
-            <p>Type <b>: </b> Bug/Poison</p>
-            <p>Height <b>: </b> 0.6m</p>
-            <p>Weight <b>: </b> 10kg</p>
-            <p>About <b>: </b></p>
-            <p>Almost incapable of moving, this Pokémon can only harden its shell to protect itself from predators.</p>
+        <div class="mainContent"  id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="014.html" class="pokemonImage"><img src="Assets/014.png" ></a>
-                <a href="013.html" class="evolutionImage"><img src="Assets/013.png"></a>
-                <a href="015.html" class="evolutionImage"><img src="Assets/015.png"></a>
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

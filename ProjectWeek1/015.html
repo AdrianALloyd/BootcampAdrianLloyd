@@ -6,9 +6,11 @@
     <title>Beedrill</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('15')">
     <header>
 
         <div class =homeLink>
@@ -34,21 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 015</p>
-            <p>Type <b>: </b> Bug/Poison</p>
-            <p>Height <b>: </b> 1.0m</p>
-            <p>Weight <b>: </b> 29.5kg</p>
-            <p>About <b>: </b></p>
-            <p>A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon</p>
+        <div class="mainContent"  id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="015.html" class="pokemonImage"><img src="Assets/015.png" ></a>
-                <a href="013.html" class="evolutionImage"><img src="Assets/013.png"></a>
-                <a href="014.html" class="evolutionImage"><img src="Assets/014.png"></a>
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

@@ -6,9 +6,11 @@
     <title>Machoke</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('67')">
     <header>
 
         <div class =homeLink>
@@ -34,24 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 067</p>
-            <p>Type <b>: </b> Fighting</p>
-            <p>Height <b>: </b> 1.5m</p>
-            <p>Weight <b>: </b> 70.5kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                Its muscular body is so powerful, it must wear a power save belt to be able to regulate its motions.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="067.html" class="pokemonImage"><img src="Assets/067.png" ></a>
-                <a href="066.html" class="evolutionImage"><img src="Assets/066.png"></a>
-                <a href="068.html" class="evolutionImage"><img src="Assets/068.png"></a>
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

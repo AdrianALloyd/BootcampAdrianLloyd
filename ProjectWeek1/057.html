@@ -6,9 +6,11 @@
     <title>Primeape</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('57')">
     <header>
 
         <div class =homeLink>
@@ -34,24 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 057</p>
-            <p>Type <b>: </b> Fighting</p>
-            <p>Height <b>: </b> 1.0m</p>
-            <p>Weight <b>: </b> 32kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                Always furious and tenacious to boot. It will not abandon chasing its quarry until it is caught.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="057.html" class="pokemonImage"><img src="Assets/057.png" ></a>
-                <a href="056.html" class="evolutionImage"><img src="Assets/056.png"></a>
-                
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

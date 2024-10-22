@@ -6,9 +6,11 @@
     <title>Sandslash</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
 </head>
 
-<body>
+<body onload="getData('28')">
+    >
     <header>
 
         <div class =homeLink>
@@ -34,20 +36,13 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 028</p>
-            <p>Type <b>: </b> Ground</p>
-            <p>Height <b>: </b> 1.0m</p>
-            <p>Weight <b>: </b> 29.5kg</p>
-            <p>About <b>: </b></p>
-            <p>Curls up into a spiny ball when threatened. It can roll while curled up to attack or escape.</p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="028.html" class="pokemonImage"><img src="Assets/028.png" ></a>
-                <a href="027.html" class="evolutionImage"><img src="Assets/027.png"></a>
+            <div class="gridImage" id="imageDetail">
                 
             </div>
         </div>

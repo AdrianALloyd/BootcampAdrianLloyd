@@ -6,9 +6,10 @@
     <title>Diglett</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
 </head>
 
-<body>
+<body onload="getData('50')">
     <header>
 
         <div class =homeLink>
@@ -34,22 +35,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 050</p>
-            <p>Type <b>: </b> Ground</p>
-            <p>Height <b>: </b> 0.2m</p>
-            <p>Weight <b>: </b> 0.8kg</p>
-            <p>About <b>: </b></p>
-            <p>Lives about one yard underground where it feeds on plant roots. It sometimes appears above ground.</p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="050.html" class="pokemonImage"><img src="Assets/050.png" ></a>
-                <a href="051.html" class="evolutionImage"><img src="Assets/051.png"></a>
-                
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

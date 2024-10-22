@@ -6,9 +6,11 @@
     <title>Rapidash</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('78')">
     <header>
 
         <div class =homeLink>
@@ -34,24 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 078</p>
-            <p>Type <b>: </b> Fire</p>
-            <p>Height <b>: </b> 1.7m</p>
-            <p>Weight <b>: </b> 95kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                Very competitive, this Pokémon will chase anything that moves fast in the hopes of racing it.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="078.html" class="pokemonImage"><img src="Assets/078.png" ></a>
-                <a href="077.html" class="evolutionImage"><img src="Assets/077.png"></a>
-
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

@@ -6,9 +6,11 @@
     <title>Snorlax</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('143')">
     <header>
 
         <div class =homeLink>
@@ -34,24 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 143</p>
-            <p>Type <b>: </b> Normal</p>
-            <p>Height <b>: </b> 2.1m</p>
-            <p>Weight <b>: </b> 460kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                Very lazy. Just eats and sleeps. As its rotund bulk builds, it becomes steadily more slothful.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="143.html" class="pokemonImage"><img src="Assets/143.png" ></a>
-            
-
-
+            <div class="gridImage" id="imageDetail">
+                
             </div>
         </div>
     </div>

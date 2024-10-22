@@ -6,9 +6,11 @@
     <title>Arcanine</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('59')">
     <header>
 
         <div class =homeLink>
@@ -34,24 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 059</p>
-            <p>Type <b>: </b> Fire</p>
-            <p>Height <b>: </b> 1.9m</p>
-            <p>Weight <b>: </b> 155kg</p>
-            <p>About <b>: </b></p>
-            <p>
-                A Pokémon that has been admired since the past for its beauty. It runs agilely as if on wings.
-            </p>
+        <div class="mainContent" id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="059.html" class="pokemonImage"><img src="Assets/059.png" ></a>
-                <a href="058.html" class="evolutionImage"><img src="Assets/058.png"></a>
-                
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>

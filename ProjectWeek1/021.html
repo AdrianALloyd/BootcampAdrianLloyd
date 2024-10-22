@@ -6,9 +6,11 @@
     <title>Spearow</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
+    <script src="pokeScript.js"></script>
+
 </head>
 
-<body>
+<body onload="getData('21')">
     <header>
 
         <div class =homeLink>
@@ -34,21 +36,14 @@
 
     <div class="gridContainer">
                 
-        <div class="mainContent" >
-            <p>ID <b>:</b> 021</p>
-            <p>Type <b>: </b> Normal/Flying</p>
-            <p>Height <b>: </b> 0.3m</p>
-            <p>Weight <b>: </b> 2.0kg</p>
-            <p>About <b>: </b></p>
-            <p>Eats bugs in grassy areas. It has to flap its short wings at high speed to stay airborne.</p>
+        <div class="mainContent"  id="detail">
+            <p></p>
             
         </div>
 
         <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="021.html" class="pokemonImage"><img src="Assets/021.png" ></a>
-                <a href="022.html" class="evolutionImage"><img src="Assets/022.png"></a>
-                
+            <div class="gridImage" id="imageDetail">
+                 
             </div>
         </div>
     </div>
