@@ -17,7 +17,7 @@ function fetchPokemonData(pokemon){
     })
 }
 
-const baseUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151`'
+const baseUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151'
 try {
     fetch(baseUrl)
     .then(response => {
@@ -26,20 +26,33 @@ try {
         })
     .then(data => {
         const pokemons = data.results
-        
-        pokemons.forEach(pokemon => {
+        if(document.getElementById('pokeList')!= null){
+        pokemons.forEach(pokemon => { //goes through all pokemon listing them with ability to click and go to pokemons direct page
             document.getElementById('pokeList')
             .insertAdjacentHTML('beforeend', 
-                `<li class="listers" onclick='detail("${pokemon.url}")'>
+                `<li onclick='detail("${pokemon.url}")'>
                 
                 <img class="pokeData" alt="${pokemon.name}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokIdGetter(pokemon.url)}.png"/>    
                 <br>
-                <button class="pokeButton"><a href="${pokIdFormat(pokemon.id)}.html" >${pokemon.name}</a></button>            
+                <button class="pokeButton"><a href="${pokLinkGetter(pokemon.url)}.html" >${pokemon.name}</a></button>            
                 </li>
                 
                 `)
-                
             })
+        }else if(document.getElementById('gallery')!= null){
+            pokemons.forEach(pokemon => { //goes through all pokemon listing them with ability to click and go to pokemons direct page
+                document.getElementById('gallery')
+                .insertAdjacentHTML('beforeend', 
+                    `<li     onclick='detail("${pokemon.url}")'>
+                    <a href="${pokLinkGetter(pokemon.url)}.html" >
+                    <img class="galData" alt="${pokemon.name}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokIdGetter(pokemon.url)}.png"/>
+                    </a>
+                    
+                    </li>
+                    
+                    `)
+                })
+        }
         })
     .catch(error => {
         console.error(error)
@@ -84,7 +97,7 @@ try {
                             <p>Height : ${pokemon.height/10}m</p>
                             <p>Weight : ${pokemon.weight/10}kg</p>
                             <p id="flavourText">${getFlavour(pokemon.id)}</p>
-                            <audio id="pokeCry" autoplay volume="0.05"  src="${pokemon.cries.legacy}"/>
+                            <audio volume="0.1" id="pokeCry" autoplay src="${pokemon.cries.latest}"/>
                         `
                             // <p>ID : ${pokIdFormat(pokemon.id)}</p>    passing pokemons id number to be parsed into 3 digits
                             // <p id="pokeType">Type :<br>  ${getType(pokTypes)}</p>  passing type array to output processed and styled types
@@ -111,13 +124,21 @@ try {
                     .then(pokemon => {
                         
                         getEvolutions(pokemon.id)
+                        let page = Math.floor((Math.random()*255) + 1);
+                        console.log(page)
+                        if(page == 5){
+                            var isShiny = `${pokemon["sprites"]["other"]["official-artwork"]["front_shiny"]}`
+                        }else{
+                            var isShiny = `${pokemon["sprites"]["other"]["official-artwork"]["front_default"]}`
+                        }
+                        
                         document.getElementById('imageDetail') 
                         // Inserts element in specified position, in this case, we're inserting it at the end of the current element
                             .insertAdjacentHTML('beforeend', // Template literal for pokemon information
                             
                                 
                                 `
-                                <a href="${pokIdFormat(pokemon.id)}.html"  class="pokemonImage"><img alt="${pokemon.name}" src="${pokemon["sprites"]["other"]["official-artwork"]["front_default"]}"/><a/>
+                                <a href="${pokIdFormat(pokemon.id)}.html"  class="pokemonImage"><img alt="${pokemon.name}" src="${isShiny}"/><a/>
                                 `    
                                 //template literal creating an image of the selected pokemon that with link to the pokemon's page
                             )       
@@ -298,3 +319,28 @@ function pokIdFormat(pokeNum){   //function to format the pokemons id number to 
         return "001";
     }
 }
+
+function pokLinkGetter(urlString){ //function to format pokemon url into 3 digit id number
+    let pokeNum = pokIdGetter(urlString);
+
+    if(pokeNum.length == 3){
+        return pokeNum;
+    }else if(pokeNum.length == 2){
+        return "0" + pokeNum;
+    }else if(pokeNum.length == 1){
+        return "00" + pokeNum;
+    }else{
+        return "001";
+    }
+
+}
+
+function getRandom(){
+    var page = pokIdFormat(Math.floor((Math.random()*151) + 1 ));
+
+    location.href = `${page}.html`;
+}
+
+
+
+
