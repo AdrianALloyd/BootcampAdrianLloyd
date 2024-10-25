@@ -6,18 +6,21 @@
     <title>Bulbasaur</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
-    
+    <script src="pokeScript.js"></script>
 </head>
 
-<body>
+<body onload="getData('1')">
     <header>
 
-        <div class =homeLink>
-            <a href="index.html"><img src="Assets/063.png" id="Homepic"></a>
+        <div class ="homeLink">
+            <a href="index.html"><img src="Assets/pallethouse.png" id="Homepic"></a>
         </div>
         <div class="bannerImg">
             <img src="Assets/headerImage.jpg" alt="pokemon logo banner image" id="banner">
         </div> 
+        <div class ="ranLink">
+            <a onclick="getRandom()"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/63.png" id="ranPic"></a>
+        </div>
         </header>
 
     <nav>
@@ -28,7 +31,7 @@
             <a href="About.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="002.html">Next Pokémon</a>
-            <!-- todo navbar -->
+            
         </div>
     </nav>
     <h1>Bulbasaur</h1>
@@ -36,21 +39,14 @@
     <div class="gridContainer">
                 
         <div class="mainContent" id="detail" >
-            <p>ID <b>:</b> 001</p>
-            <p>Type <b>: </b> Grass/Poison</p>
-            <p>Height <b>: </b> 0.7m</p>
-            <p>Weight <b>: </b> 6.9kg</p>
-            <p>About <b>: </b></p>
-            <p>A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon</p>
-            
+            <p></p>
             
         </div>
 
-        <div class="secondaryContent">
-            <div class="gridImage">
-                <a href="001.html" class="pokemonImage"><img src="Assets/001.png" ></a>
-                <a href="002.html" class="evolutionImage"><img src="Assets/002.png"></a>
-                <a href="003.html" class="evolutionImage"><img src="Assets/003.png"></a>
+        <div class="secondaryContent" >
+            <p></p>
+            <div class="gridImage" id="imageDetail">
+
             </div>
         </div>
     </div>
@@ -59,7 +55,7 @@
     
 
 
-    <footer>
+    <footer id="foot">
         <h5>© Adrian LLoyd 2024</h5>
     </footer>    
 </body>
