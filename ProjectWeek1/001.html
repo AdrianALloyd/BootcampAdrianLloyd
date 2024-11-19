@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bulbasaur</title>
+    <title id="title"></title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="Assets/Icon.png" type="icon/x-icon">
-    <script src="pokeScript.js"></script>
+    
 </head>
 
-<body onload="getData('1')">
+<body onload="getData()">
     <header>
 
         <div class ="homeLink">
@@ -24,17 +24,18 @@
         </header>
 
     <nav>
-        <div class="navBar">
+        <div class="navBar" id="navBar">
+            <a onclick=previousPokemon() id="prevPok">Previous Pokémon</a>
             <a href="index.html">Home</a>
             <a href="list.html">List</a>
             <a href="gallery.html">Gallery</a>
             <a href="About.html">About</a>
             <a href="contact.html">Contact</a>
-            <a href="002.html">Next Pokémon</a>
+            <a onclick=nextPokemon() id="nextPok">Next Pokémon</a>
             
         </div>
     </nav>
-    <h1>Bulbasaur</h1>
+    <h1 id="pokeName"></h1>
 
     <div class="gridContainer">
                 
@@ -59,5 +60,5 @@
         <h5>© Adrian LLoyd 2024</h5>
     </footer>    
 </body>
-
+<script src="pokeScript.js"></script>
 </html>
