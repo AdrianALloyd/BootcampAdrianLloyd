@@ -56,13 +56,21 @@ try {
                 document.getElementById('gallery')
                 .insertAdjacentHTML('beforeend', 
                     `<li >
-                    <a href="${pokLinkGetter(pokemon.url)}.html" >
-                    <img class="galData" alt="${pokemon.name}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokIdGetter(pokemon.url)}.png"/>
+                    <a>
+                    <img class="galData" id="${sampleId}" alt="${pokemon.name}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokIdGetter(pokemon.url)}.png"/>
                     </a>
                     
                     </li>
                     
                     `)
+                    document.getElementById(sampleId).addEventListener('click', 
+                        function(){
+                            console.log("passed ID:" + this.id)
+                            sessionStorage.setItem("idNo", this.id)
+                            window.location.href= "001.html"
+                        }
+                    )
+                    sampleId ++
                 })
         }
         })
